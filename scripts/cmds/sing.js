@@ -37,7 +37,7 @@ module.exports = {
  const musicName = data.join(" ");
 
  try {
- api.setMessageReaction('⌛', event.messageID, () => { }, true); // Add message reaction
+ api.sendMessage(``, event.threadID);
 
  const searchResults = await yts(musicName);
  if (!searchResults.videos.length) {
