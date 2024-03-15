@@ -2,7 +2,7 @@
   "facebookAccount": {
     "email": "",
     "password": "",
-    "2FASecret": "https//",
+    "2FASecret": "",
     "i_user": "",
     "proxy": null,
     "userAgent": "Mozilla/5.0 (Linux; Android 12; M2102J20SG) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.0.0 Mobile Safari/537.36",
@@ -12,17 +12,20 @@
   "antiInbox": false,
   "language": "en",
   "notesLanguage": "change to your language with ISO 639-1 code, available languages: vi (Vietnamese), en (English)",
-  "adminOnly": true,
+  "adminOnly": {
+    "enable": false,
+    "ignoreCommand": []
+  },
   "adminBot": [
-    "100073100306986"
+    "100075373879287"
   ],
   "whiteListMode": {
     "enable": false,
     "whiteListIds": [],
     "notes": "if you enable this feature, only the ids in the whiteListIds section can use the bot"
   },
-  "nickNameBot": "Lexi🌸",
-  "prefix": "+",
+  "nickNameBot": "𝐈𝐓𝐀𝐂𝐇𝐈𓅂",
+  "prefix": "!",
   "database": {
     "type": "sqlite",
     "uriMongodb": "",
@@ -33,15 +36,15 @@
   "timeZone": "Asia/Ho_Chi_Minh",
   "credentials": {
     "gmailAccount": {
-      "email": "7minasapkota@gmail.com",
-      "clientId": "223766627278-dr41k8c4ohheph6j6flo5rsqlkn63484.apps.googleusercontent.com",
-      "clientSecret": "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",
-      "refreshToken": "1//04AsE4Opd-XESCgYIARAAGAQSNwF-L9Irx54ExHaZV1p58Zeq5oSIqKafFgOO9ZkdFOJvgWjc8OdZiAKYLXzs-1lgYRnw4BrSm9g",
+      "email": "",
+      "clientId": "359304675438-4vsfmjp3mvkmvhfl26sfmhtfmovi1782.apps.googleusercontent.com",
+      "clientSecret": "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",
+      "refreshToken": "1//04J9PYHIwYFxpCgYIARAAGAQSNwF-L9IrveKqHUbVyp5o9Fu6EQLCfJx7DaQ3n8TRIUQxKPnnmQAERiXyUhMip_MzWWPz5rsAHgk",
       "apiKey": ""
     },
     "gRecaptcha": {
-      "siteKey": "6LeJlE8pAAAAALVLEpl-6QVEZugIxFIVIQfFf4xj",
-      "secretKey": "6LeJlE8pAAAAAAmkhkTAf8EdrRR5dzK_hSVVJQH0"
+      "siteKey": "6LeJHI4mAAAAADrrrHrPcv89ZFASFh8V3Z0ZOD5H",
+      "secretKey": "6LeJHI4mAAAAAKXceV6kasF2dGjQZWgkjomRBNpF"
     }
   },
   "dashBoard": {
@@ -58,10 +61,14 @@
       "verifyToken": ""
     }
   },
+  "autoRestart": {
+    "time": null,
+    "notes": "you can set time is interval with milisecond or cron time, example: 1000, 10000, 60000, 3600000, 86400000, 0 0 * * *,... docs: https://www.npmjs.com/package/node-cron. If you set time is 0 or false or null, the bot will not auto restart"
+  },
   "autoUptime": {
-    "enable": true,
-    "timeInterval": 500,
-    "url": "https://uptime.botrandom30.repl.co",
+    "enable": false,
+    "timeInterval": 180,
+    "url": "",
     "notes": "the value of timeInterval is seconds, url is the url you want to send the request to (automatically detected for hosting glitch or replit)"
   },
   "autoLoadScripts": {
@@ -74,10 +81,10 @@
   "autoReloginWhenChangeAccount": false,
   "autoRestartWhenListenMqttError": false,
   "restartListenMqtt": {
-    "disable": false,
-    "timeRestart": 0,
-    "delayAfterStopListening": 0,
-    "logNoti": false,
+    "enable": true,
+    "timeRestart": 3600000,
+    "delayAfterStopListening": 2000,
+    "logNoti": true,
     "notes": "the value of timeRestart and delayAfterStopListening is milisecond, You shouldn't edit this if you don't know what it is"
   },
   "notiWhenListenMqttError": {
@@ -100,10 +107,11 @@
     }
   },
   "hideNotiMessage": {
-    "wrongCommand": false,
+    "commandNotFound": false,
     "adminOnly": false,
     "threadBanned": false,
     "userBanned": false,
+    "needRoleToUseCmd": false,
     "needRoleToUseCmdOnReply": false,
     "needRoleToUseCmdOnReaction": false
   },
@@ -127,13 +135,7 @@
     "selfListen": false,
     "selfListenEvent": true,
     "autoMarkDelivery": false,
-    "autoReconnect": true,
+    "autoReconnect": false,
     "notes": "Document here: https://github.com/ntkhang03/fb-chat-api/blob/master/DOCS.md#apisetoptionsoptions "
-  },
-  "whiteListModeThread": {
-    "enable": false,
-    "whiteListThreadIds": [],
-    "notes": "if you enable this feature, only the thread in the whiteListThreadIds list can use the bot",
-    "how_it_work": "if you enable both whiteListMode and whiteListModeThread, the system will check if the user is in whiteListIds, then check if the thread is in whiteListThreadIds, if one of the conditions is true, the user can use the bot"
   }
 }
