@@ -4,7 +4,7 @@ module.exports = {
   config: {
     name: "say",
     version: "1.5",
-    author: "Otinxsandip",
+    author: "CLYDE JVSK",
     countDown: 5,
     role: 0,
     longDescription: "voice",
@@ -20,7 +20,7 @@ module.exports = {
       if (!text) {
         return message.reply('please type text or reply to text');
       }
-      const link = `https://sandipbaruwal.onrender.com/say?text=${encodeURIComponent(text)}`;
+      const link = `https://api-samir.onrender.com/emily?text=${encodeURIComponent(text)}`;
 
       message.reply({
         body: '🗣',
