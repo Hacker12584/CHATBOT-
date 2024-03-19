@@ -1,7 +1,7 @@
 {
   "facebookAccount": {
-    "email": "lexijames851@gmail.com",
-    "password": "SSUNIL#17",
+    "email": "",
+    "password": "",
     "2FASecret": "",
     "i_user": "",
     "proxy": null,
@@ -17,7 +17,7 @@
     "ignoreCommand": []
   },
   "adminBot": [
-    "100073100306986"
+    "100075373879287"
   ],
   "whiteListMode": {
     "enable": false,
