@@ -2,9 +2,10 @@ const axios = require('axios');
 
 module.exports = {
   config: {
-    name: "lexi",
+    name: "baby",
+
     version: "1.0",
-    author: "MILAN",
+    author: "clyde jvsk",
     countDown: 5,
     role: 0,
     shortDescription: "",
@@ -20,17 +21,21 @@ module.exports = {
     try {
       const response = await axios.get("https://milanbhandari.onrender.com/infra", {
         params: {
-          query: prompt
+          prompt: prompt
         }
       });
 
-      message.reply({ body: `${response.data.choices[0].message.content}` }, (err, info) => {
-        global.GoatBot.onReply.set(info.messageID, {
-          commandName,
-          messageID: info.messageID,
-          author: event.senderID
+      if (response.data && response.data.answer) {
+        message.reply({ body: `${response.data.answer}` }, (err, info) => {
+          global.GoatBot.onReply.set(info.messageID, {
+            commandName,
+            messageID: info.messageID,
+            author: event.senderID
+          });
         });
-      });
+      } else {
+        console.error("Invalid response format:", response.data);
+      }
     } catch (error) {
       console.error("Error:", error.message);
     }
@@ -45,18 +50,21 @@ module.exports = {
     try {
       const response = await axios.get("https://milanbhandari.onrender.com/infra", {
         params: {
-          query: prompt
+          prompt: prompt
         }
       });
 
-      message.reply({ body: `${response.data.choices[0].message.content}` }, (err, info) => {
-        global.GoatBot.onReply.set(info.messageID, {
-          commandName,
-          messageID: info.messageID,
-          author: event.senderID
+      if (response.data && response.data.answer) {
+        message.reply({ body: `${response.data.answer}` }, (err, info) => {
+          global.GoatBot.onReply.set(info.messageID, {
+            commandName,
+            messageID: info.messageID,
+            author: event.senderID
+          });
         });
-      });
-
+      } else {
+        console.error("Invalid response format:", response.data);
+      }
     } catch (error) {
       console.error("Error:", error.message);
     }
