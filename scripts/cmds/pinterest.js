@@ -27,15 +27,15 @@ module.exports = {
       const keySearch = args.join(" ");
       if (!keySearch.includes("-")) {
         return api.sendMessage(
-          "Please enter the search query and number of images (1-4)",
+          "Please enter the search query and number of images (1-25)",
           event.threadID,
           event.messageID
         );
       }
       const keySearchs = keySearch.substr(0, keySearch.indexOf('-'))
       let numberSearch = keySearch.split("-").pop() || 6
-    if (numberSearch> 4 ){
-      numberSearch = 4
+    if (numberSearch> 25 ){
+      numberSearch = 25
     }
 
       const apiUrl = `https://turtle-apis.onrender.com/api/pinterest?search=${encodeURIComponent(keySearchs)}&keysearch=${numberSearch}`;
