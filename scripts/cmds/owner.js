@@ -44,11 +44,11 @@ module.exports = {
 message.reply(`======[𝗕𝗼𝘁 𝗶𝗻𝗳𝗼:]======
 𝗕𝗼𝘁 𝗽𝗿𝗲𝗳𝗶𝘅: ${botPrefix}
 
-𝗕𝗼𝘁 𝗻𝗮𝗺𝗲 : sweetie 🩷
+𝗕𝗼𝘁 𝗻𝗮𝗺𝗲 : Gilgamesh UltraBot
 
-𝗢𝘄𝗻𝗲𝗿: ${authorName}
+𝗢𝘄𝗻𝗲𝗿: ${Authorname}
 
-𝗙𝗮𝗰𝗲𝗯𝗼𝗼𝗸: [${authorName}] ${authorFB}
+𝗙𝗮𝗰𝗲𝗯𝗼𝗼𝗸: [${Authorname}] ${authorFb}
 
  𝗗𝗮𝘁𝗲: ${date}
 
